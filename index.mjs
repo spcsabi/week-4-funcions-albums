@@ -3,6 +3,8 @@ import {
   getAlbumWithMostOfGenres,
   getAlbumWithTeMostOfSale,
   getAlbumWithYearOf,
+  getAlbumWithArtistOf,
+  getAlbumWithGenreOf,
 } from "./commands.mjs";
 
 // got this from an api
@@ -77,6 +79,14 @@ if (command === "most-genre") {
 } else if (command === 'year') {
   const year = Number(process.argv[3]);
   getAlbumWithYearOf(bestSellingAlbums, year);
+}else if (command === 'artist') {
+    const artist = process.argv[3];
+    getAlbumWithArtistOf(bestSellingAlbums, artist);
+}else if (command === 'genre') {
+    const genre = process.argv[3];
+    getAlbumWithGenreOf(bestSellingAlbums, genre);
 } else {
   console.log("i do not understand", command);
 }
+
+
