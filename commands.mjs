@@ -51,8 +51,8 @@ export function getAlbumWithGenreOf(albums, genre) {
     for (let j = 0; j < albums[i].genres.length; j++){
       if (albums[i].genres[j] === genre) {
         console.log("By Genre", albums[i].title);
-        break; // exit the for loop
       }
+    break; // exit the for loop
       }
   }
 }
